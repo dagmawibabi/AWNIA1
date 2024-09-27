@@ -99,13 +99,15 @@ export default function Auth() {
                 </div>
                 <div className="mt-2 text-center">
                     <span className="text-gray-600">
-                        Don't have an account?{" "}
+                        {isLogin
+                            ? "Don't have an account? "
+                            : "Already have an account? "}
                     </span>
                     <button
                         onClick={toggleForm}
                         className="text-black hover:underline"
                     >
-                        Sign up
+                        {isLogin ? "Sign Up" : "Log in"}
                     </button>
                 </div>
             </div>
